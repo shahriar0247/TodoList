@@ -2,10 +2,10 @@ import { View, Text, StyleSheet, Pressable } from "react-native";
 import React from "react";
 import { colors } from "../globals/colors";
 
-export default function Button({ text, style }) {
+export default function Button({ text, style, onClick }) {
   return (
     <View style={style}>
-      <Pressable style={styles.pressable}>
+      <Pressable style={styles.pressable} onPress={onClick}>
         <Text style={styles.text}>{text}</Text>
       </Pressable>
     </View>

@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
+import { colors } from '../globals/colors'
 
 export default function Heading() {
   return (
@@ -15,6 +16,7 @@ const styles = StyleSheet.create({
     },
     heading: {
         fontWeight: "bold",
-        fontSize: 30
+        fontSize: 30,
+        color: colors.accent
     }
 })
