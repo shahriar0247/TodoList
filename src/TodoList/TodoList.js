@@ -5,8 +5,9 @@ import ItemList from "./components/ItemList";
 import Heading from "./components/Heading";
 import ItemAdd from "./components/ItemAdd";
 import { colors } from "./globals/colors";
+import Button from "./global_components/Button";
 
-export default function TodoList() {
+export default function TodoList({ navigation }) {
   const [item_list, set_item_list] = useState([
    
   ]);
@@ -16,6 +17,10 @@ export default function TodoList() {
       <Heading></Heading>
       <ItemList item_list={item_list} set_item_list={set_item_list}></ItemList>
       <ItemAdd style={styles.item_add} item_list={item_list} set_item_list={set_item_list}></ItemAdd>
+      <Button
+        title="Go to Details"
+        onPress={() => navigation.navigate('About')}
+      />
       <StatusBar style="auto" />
     </View>
   );

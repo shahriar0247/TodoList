@@ -31,7 +31,7 @@ export default function ItemAdd({ style, item_list, set_item_list }) {
     <View style={style}>
       <View style={styles.view}>
         <TextInput style={styles.input} value={input_value} onChangeText={set_input_value}></TextInput>
-        <Button text="Add" style={styles.add_button} onClick={add_item}></Button>
+        <Button text="Add" style={styles.add_button} onPress={add_item}></Button>
       </View>
     </View>
   );

@@ -11,8 +11,6 @@ export default function Item({ key2, name, description, remove_item, item_list, 
 
     let array = [...item_list];
     array.forEach((item, index) => {
-      console.log(item['key'])
-      console.log(key2)
       if (item['key'] == key2) {
         array.splice(index, 1);
         set_item_list(array)
@@ -31,7 +29,7 @@ export default function Item({ key2, name, description, remove_item, item_list, 
         <Text style={styles.description}>{description}</Text>
       </View>
       <View style={styles.button_container}>
-        <Button text='Delete' onClick={remove_item}></Button>
+        <Button text='Delete' onPress={remove_item}></Button>
       </View>
     </View>
   );
